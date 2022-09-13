@@ -1,11 +1,11 @@
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
-const { Db } = require('mongodb');
+const db = require('./config/connection')
 
 require('dotenv').config()
 
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.use(express.urlencoded({ extended: false }));
